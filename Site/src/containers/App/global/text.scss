@@ -1,0 +1,14 @@
+.uppercase {
+  text-transform: uppercase !important;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.underline {
+  text-decoration: underline !important;
+}
+.paragraph {
+  span {
+    line-height: 1.7;
+  }
+}

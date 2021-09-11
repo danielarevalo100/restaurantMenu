@@ -1,0 +1,38 @@
+:root {
+  --blue: #005eff;
+  --dark-blue: #021885;
+  --black: #02003d;
+  --yellow: #fd9d3e;
+}
+.font-title-cursive {
+  font-family: 'Pacifico', cursive;
+}
+.font-title {
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+.font-title-bold {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: 700;
+}
+.font-light {
+  font-family: Exo;
+  font-weight: 400;
+}
+.font-light-italic {
+  font-family: Exo;
+  font-weight: 400;
+  font-style: italic;
+}
+.font-medium {
+  font-family: Exo;
+  font-weight: 700;
+}
+.font-bold {
+  font-family: Exo;
+  font-weight: 900;
+}
+.font-bold-italic {
+  font-family: Exo;
+  font-weight: 900;
+  font-style: italic;
+}

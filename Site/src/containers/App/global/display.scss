@@ -1,0 +1,59 @@
+.absolute {
+  position: absolute !important;
+  width: 100%;
+  height: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+.full-height {
+  height: 100%;
+}
+.flex {
+  flex: 1;
+}
+.align-start {
+  align-items: flex-start !important;
+}
+.align-end {
+  align-items: flex-end !important;
+}
+.align-stretch {
+  align-self: stretch !important;
+}
+.justify-start {
+  justify-content: flex-start !important;
+}
+.justify-end {
+  justify-content: flex-end !important;
+}
+.space-between {
+  justify-content: space-between !important;
+}
+.row {
+  flex-direction: row !important;
+}
+.column-reverse {
+  flex-direction: column-reverse !important;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+
+.margin-top {
+  margin-top: 2rem !important;
+}
+.margin-bottom {
+  margin-bottom: 2rem !important;
+}
+.margin-left {
+  margin-left: 2rem !important;
+}
+.margin-right {
+  margin-right: 2rem !important;
+}
+
+.padding {
+  padding: 2rem !important;
+}

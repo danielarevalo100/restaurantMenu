@@ -1,0 +1,60 @@
+.button {
+  background-color: #00C41F !important;
+  border-radius: 0.2rem !important;
+  padding: 0.2rem 0.5rem !important;
+  min-width: auto !important;
+}
+.textfield {
+  width: 100%;
+  height: 3rem;
+  font-family: 'Webfont-Title-Extra-Light' !important;
+  color: white !important;
+}
+
+.white-box {
+  width: 100%;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: 0px 5px 21px -7px rgba(0,94,255,0.75);
+  box-shadow: 0px 5px 21px -7px rgba(0,94,255,0.75);
+}
+
+.vertical-divider {
+  width: 1px;
+  background-color: #d2dcd6;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  align-self: stretch;
+}
+.horizontal-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #d2dcd6;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.loading-view {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 999999;
+}
+.lazy-loading-view {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 999999;
+}
+
+@media only screen and (max-width: 600px) {
+  .white-box {
+    padding: 1.5rem !important;
+  }
+}

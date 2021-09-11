@@ -1,0 +1,18 @@
+.home {
+  .category {
+    padding: 0.6rem 1rem;
+    border-radius: 5rem;
+    &.selected {
+      background-color: var(--yellow);
+    }
+  }
+  .plates-container {
+    max-width: 100rem;
+    .plate {
+      width: 33%;
+      @media(max-width: 700px) {
+        width: 100%;
+      }
+    }
+  }
+}
