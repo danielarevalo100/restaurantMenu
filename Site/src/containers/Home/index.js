@@ -5,11 +5,6 @@ import View from 'components/View';
 import Text from 'components/Text';
 import Plate from 'components/Plate';
 
-/* components */
-import SandwicheImage from 'assets/images/plates/sandwich.jpg'
-import PinchoImage from 'assets/images/plates/pincho.jpg'
-import HamburguesaImage from 'assets/images/plates/hamburguesa.jpg'
-
 /* managers */
 import { categoriesApi, platesApi } from 'managers/Api';
 
