@@ -49,7 +49,7 @@ const Home = (props) => {
         <Text className='margin-top font-title-cursive' color='var(--yellow)' fontSize='3'>El Fortin Porteno</Text>
         <Text className='font-title-bold uppercase' fontSize='4' spacing={0.2} textAlign='center' color='white'>Nuestro menu especial</Text>
       </View>
-      <View className='margin-top'>
+      <View className='full-width margin-top'>
         <View className='row wrap' style={{ padding: '0.5rem' }}>
           {categories.map(({ name: cat }, i) => (
             <View onClick={() => setCategory(i)} className={`category ${category == i ? 'selected': ''}`}><Text className='font-title-bold uppercase' fontSize='1.7' spacing={0.2} color='#fff'>{cat}</Text></View>
