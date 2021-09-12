@@ -6,7 +6,7 @@ const path = require("path");
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: path.join(__dirname, '../../../AWS/historybook/'),
+    path: path.join(__dirname, '../../backend/src/public'),
     filename: "[name].[contenthash].js",
     publicPath: "",
   },

@@ -46,7 +46,7 @@ const Home = (props) => {
   return( 
     <View className='home'>
       <View>
-        <Text className='margin-top font-title-cursive' color='var(--yellow)' fontSize='3'>El Fortin Proteno</Text>
+        <Text className='margin-top font-title-cursive' color='var(--yellow)' fontSize='3'>El Fortin Porteno</Text>
         <Text className='font-title-bold uppercase' fontSize='4' spacing={0.2} textAlign='center' color='white'>Nuestro menu especial</Text>
       </View>
       <View className='margin-top'>

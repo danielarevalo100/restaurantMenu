@@ -1,4 +1,4 @@
-const API_URL_BASE = 'http://localhost:8080/api/'
+const API_URL_BASE = window.location.href.includes('localhost') ? 'http://localhost:8080/api/' : 'http://fortinporteno.arevaloweb.com/api/';
 const noParams = {};
 
 const doApiCall = (endpoint, method, params, fallback = null, callback) => {
