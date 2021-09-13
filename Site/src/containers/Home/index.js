@@ -51,7 +51,7 @@ const Home = (props) => {
           ))}
         </View>
         <View style={{ marginTop: '1rem' }}></View>
-      <View className='full-width row wrap plates-container justify-start'>
+      <View className='full-width row wrap plates-container align-start justify-start'>
         {drawPlates()}
       </View>
       </View>
