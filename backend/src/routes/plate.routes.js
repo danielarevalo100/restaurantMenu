@@ -10,7 +10,7 @@ router.post('/', async (req, res) => {
   } catch(error) {
     res.status(200).json({ message: error.message, ok: false })
   }
-})
+});
 
 router.put('/:id', async (req, res) => {
   const id = req.params.id;

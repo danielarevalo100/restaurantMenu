@@ -8,7 +8,6 @@ class Plates {
   }
 
   async getPlates() {
-    console.log('herereer')
     const plates = await Plate.find();
     const categories = await Category.find();
 
@@ -33,6 +32,11 @@ class Plates {
   async addPlate(plate) {
     const newPlate = new Plate(plate);
     await newPlate.save();
+    return true;
+  }
+
+  async addPlates(plates) {
+    Plate.insertMany(plates);
     return true;
   }
 

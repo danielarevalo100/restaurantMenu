@@ -8,6 +8,7 @@ import CustomTable from 'components/CustomTable';
 
 /* managers */
 import { platesApi, categoriesApi } from 'managers/Api';
+import csv from 'csvtojson';
 
 /* styles */
 import './styles.scss';
@@ -16,9 +17,9 @@ const Plates = () => {
 
   /* variables */
   const columns = [
-    { style: { width: '10%' }, title: 'Imagen', field: 'image', render: (row) => <img style={{ width: '4rem' }} src={row.image}/> },
+    //{ style: { width: '10%' }, title: 'Imagen', field: 'image', render: (row) => row.image ? (<img style={{ width: '4rem' }} src={row.image}/>) : 'No hay imagen disponible' },
     { style: { width: '20%' }, title: 'Nombre', field: 'name' },
-    { style: { width: '30%' }, title: 'Descripcion', field: 'desc' },
+    { style: { width: '35%', paddingRight: '5rem' }, title: 'Descripcion', field: 'desc' },
     { style: { width: '10%' }, title: 'Precio', field: 'price' },
     { style: { flex: 1 }, title: 'Categorias', field: 'categories', editComponent: forwardRef((props, ref) => editableField('category', props)) ,render: (row) => <Text fontSize={1.2}>{row.categories.map((item) => item.name).join(',')}</Text> },
   ]
@@ -94,9 +95,28 @@ const Plates = () => {
     }),
   }) 
 
+  const handleAddFile = (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.onload = (x) => handleCSVfile(x.target.result)
+    reader.readAsText(file);
+    console.log(file)
+
+  }
+
+  const handleCSVfile = async (file) => {
+    const parsed = await csv({ output: 'csv' }).fromString(file);
+    parsed.forEach(plate => {
+      platesApi.add({ name: plate[0], desc: plate[1], price: plate[2], categories: [plate[4]] }, (res) => console.log(res))
+    })
+  }
+
   return(
     <View className='plates'>
       <View className='container' style={{ marginTop: '3rem' }}>
+        <View>
+          <input type='file' accept='text/csv' onChange={(e) => handleAddFile(e)}/>
+        </View>
         <CustomTable title='Platos' columns={columns}  data={data} loading={data.length == 0 || loading} editable={editable()}/>
       </View>
     </View>
