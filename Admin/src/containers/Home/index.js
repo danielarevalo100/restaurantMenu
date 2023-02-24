@@ -14,7 +14,7 @@ import './styles.scss';
 const Home = (props) => {
 
   const columns = [
-    {style:{ flex: 1 }, title: 'Nombre', field: 'name'}
+    {style:{ flex: 1 }, title: 'Name', field: 'name'}
   ]
 
   /* states */
@@ -60,7 +60,7 @@ const Home = (props) => {
   return( 
     <View className='home'>
       <View className='container'>
-        <CustomTable title='Categorias' data={data} columns={columns} editable={tableEditable()} loading={data.length == 0 || loading}/>
+        <CustomTable title='Categories' data={data} columns={columns} editable={tableEditable()} loading={data.length == 0 || loading}/>
       </View>
     </View>
   )

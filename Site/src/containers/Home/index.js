@@ -49,13 +49,11 @@ const Home = (props) => {
         <Text className='font-title-bold uppercase' fontSize='4' spacing={0.2} textAlign='center' color='white'>Nuestro menu especial</Text>
       </View>
       {/*
-
           {categories.map(({ name: cat }, i) => (
             <View onClick={() => setCategory(i)} className={`category ${category == i ? 'selected': ''}`}><Text className='font-title-bold uppercase' fontSize='1.7' spacing={0.2} color='#fff'>{cat}</Text></View>
           ))}
-        
       */}
-      <View className='full-width margin-top'>
+      <View className='full-width margin-top' style={{ maxWidth: 1200 }}>
         <View onClick={() => setShowCategories(!showCategories)} className='full-width row justify-start' style={{ padding: '0 2rem' }}>
           <Text className='font-title-cursive' style={{ textTransform: 'capitalize', marginRight: '2rem', borderBottom: '0.4rem dotted var(--yellow)', lineHeight: 1, paddingBottom: '0.5rem', overflow: 'visible' }} fontSize='4' spacing={0.2} color='var(--yellow)'>{categories[category]?.name || ''}</Text>
           <img style={{ width: '2rem', transform: showCategories ? 'rotate(180deg)' : 'rotate(0deg)', transition: '0.2s' }} src={ArrowIcon}/>

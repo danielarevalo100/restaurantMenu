@@ -1,5 +1,5 @@
-import { useEffect, useState, forwardRef } from 'react';
-import { FormControlLabel, Checkbox } from '@material-ui/core';
+import { useEffect, useState, forwardRef, useRef } from 'react';
+import { FormControlLabel, Checkbox, ButtonBase } from '@material-ui/core';
 
 /* components */
 import View from 'components/View';
@@ -14,6 +14,9 @@ import csv from 'csvtojson';
 import './styles.scss';
 
 const Plates = () => {
+
+  /* refs */
+  const fileInput = useRef(null);
 
   /* variables */
   const columns = [
@@ -114,10 +117,11 @@ const Plates = () => {
   return(
     <View className='plates'>
       <View className='container' style={{ marginTop: '3rem' }}>
-        <View>
-          <input type='file' accept='text/csv' onChange={(e) => handleAddFile(e)}/>
+        <View style={{ marginBottom: '1rem' }} className=''>
+          <ButtonBase style={{ backgroundColor: 'rgb(238, 238, 238)', borderRadius: '0.3rem', padding: '0.5rem 1rem' }} onClick={() => fileInput.current.click()}>Import</ButtonBase>
+          <input ref={fileInput} style={{ display: 'none' }} className='hidden' type='file' accept='text/csv' onChange={(e) => handleAddFile(e)}/>
         </View>
-        <CustomTable title='Platos' columns={columns}  data={data} loading={data.length == 0 || loading} editable={editable()}/>
+        <CustomTable title='Plates' columns={columns}  data={data} loading={data.length == 0 || loading} editable={editable()}/>
       </View>
     </View>
   )
